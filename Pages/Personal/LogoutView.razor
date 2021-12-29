@@ -1,0 +1,33 @@
+﻿@page "/personal/logout"
+
+@using Personal_WebAssebly_App_Fh_Aachen.Interfaces
+@inject IAuthenticationRepo _autho;
+@inject NavigationManager UriHelper;
+@inject Blazored.Toast.Services.IToastService Toaster
+
+
+
+
+
+
+
+@code {
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await _autho.Logout();
+            Toaster.ShowWarning($"Logged OUT", "");
+            StateHasChanged();
+            UriHelper.NavigateTo("/personal/login");
+        }
+        catch
+        {
+            Toaster.ShowError("Something went Wrong", "");
+        }
+
+    }
+
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Fh-Aachen",
+  "short_name": "Fh-Aachen",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03173d",
+  "icons": [
+    {
+      "src": "icon-513.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
